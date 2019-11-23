@@ -1,31 +1,11 @@
-function createMemoryCard() {
-    const memoryCard = document.createElement('article')
-
-    const iconCollab = `
-    <img 
-        src="img/icon-collabcode.png" 
-        alt="Mascote da ColabCode" 
-        class="icon"
-    >`
-
-    memoryCard.classList.add('memory-card')
-    wrapCards.insertBefore(memoryCard, null)
-
-    memoryCard.insertAdjacentHTML('afterbegin', iconCollab)
-}
-
-function createMemoryCardFront() {
-    const memoryCardFront = document.createElement('article')
-    const iconC = `
+const createMemoryCard = (src, alt, nameClass) => `
+    <article class="memory-card ${nameClass}">
         <img 
-            src="img/icon-c.png" 
-            alt="Icone da linguagem C++" 
+            src="${src}" 
+            alt="${alt}" 
             class="icon"
-        >`
+            onClick="handleClick()"
+        />
+    </article>`
 
-    memoryCardFront.classList.add('memory-card')
-    memoryCardFront.classList.add('-front')
-    wrapCards.insertBefore(memoryCardFront, null)
-
-    memoryCardFront.insertAdjacentHTML('afterbegin', iconC)
-}
+const handleClick = () => console.log('oi')
