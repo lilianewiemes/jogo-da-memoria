@@ -1,11 +1,19 @@
-const createMemoryCard = (src, alt, nameClass) => `
-    <article class="memory-card ${nameClass}">
-        <img 
-            src="${src}" 
-            alt="${alt}" 
-            class="icon"
-            onClick="handleClick()"
-        />
-    </article>`
+const createMemoryCard = ({ src, alt }) => `
+    <div class="memory-card" onClick="handleClick(this)">
+        <article class="card -front">
+            <img 
+                src="${src}" 
+                alt="${alt}" 
+                class="icon"
+            />
+        </article>
+        <article class="card">
+            <img 
+                src="img/icon-collabcode.png" 
+                alt=Mascote da Colsbcode" 
+                class="icon"
+            />
+        </article>
+    </div>`
 
-const handleClick = () => console.log('oi')
+const handleClick = element => element.classList.toggle('-active')
