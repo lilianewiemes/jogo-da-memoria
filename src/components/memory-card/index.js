@@ -17,10 +17,26 @@ const createMemoryCard = ({ src, alt }) => `
     </div>`
 
 const handleClick = element => {
+    activateMemoryCard(element)
+    
+    checkIsRight()
+}
+
+/**
+ * Enable a maximum of 2 cards
+ * @param {*} element 
+ */
+function activateMemoryCard(element) {
     if (qtdActiveMemoryCard < 2) {
         element.classList.add('-active')
     }
-    
+}
+
+
+/**
+ * Check if the 2 cards is equals
+ */
+function checkIsRight() {
     if (qtdActiveMemoryCard === 1 ) {
         const activeMemoryCards = document.querySelectorAll('.memory-card.-active')
 
