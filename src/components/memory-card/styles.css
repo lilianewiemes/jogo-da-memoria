@@ -21,11 +21,13 @@
     background-color: #fff;
 }
 
-.memory-card.-active .card {
+.memory-card.-active .card,
+.memory-card.-score .card {
     display: none;
 }
 
-.memory-card.-active .card.-front {
+.memory-card.-active .card.-front,
+.memory-card.-score .card.-front {
     display: flex;
 }
 
