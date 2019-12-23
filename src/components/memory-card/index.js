@@ -18,7 +18,7 @@ const createMemoryCard = ({ src, alt }) => `
 
 const handleClick = element => {
     activateMemoryCard(element)
-    
+
     checkIsRight()
 }
 
@@ -26,23 +26,22 @@ const handleClick = element => {
  * Enable a maximum of 2 cards
  * @param {*} element 
  */
-function activateMemoryCard(element) {
-    if (qtdActiveMemoryCard < 2) {
+const activateMemoryCard = element => {
+    if (store.qtdActiveMemoryCard < 2) {
         element.classList.add('-active')
     }
 }
 
-
 /**
  * Check if the 2 cards is equals
  */
-function checkIsRight() {
-    if (qtdActiveMemoryCard === 1 ) {
+const checkIsRight = () => {
+    if (store.qtdActiveMemoryCard === 1 ) {
         const activeMemoryCards = document.querySelectorAll('.memory-card.-active')
 
         if (activeMemoryCards[0].querySelector('.-front .icon').getAttribute('src') ===
         activeMemoryCards[1].querySelector('.-front .icon').getAttribute('src')) {
-            score++
+            store.score++
             activeMemoryCards.forEach(item => {
                 item.classList.add('-score')
                 item.classList.remove('-active')
@@ -53,7 +52,7 @@ function checkIsRight() {
                     item.classList.remove('-active')
                 })
     
-                qtdActiveMemoryCard = 0
+                store.qtdActiveMemoryCard = 0
             }, 1000)
         }
     }
