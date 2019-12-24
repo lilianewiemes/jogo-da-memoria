@@ -1,0 +1,30 @@
+.btn-start {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #3ead6f;
+    border: #3ead6f;
+    color: #000000;
+    border-radius: 50px;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
