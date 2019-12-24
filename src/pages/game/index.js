@@ -4,6 +4,8 @@
     const cardsWrapper = createCardWrapper()
     const createMemoryCard = memoryCard.create
 
+    const pointStoreBar = pointBar.create()
+
     const memoryCardC = createMemoryCard({
         src: 'img/icon-c.png',
         alt: 'Icone linguagem C++'
@@ -30,5 +32,6 @@
     cardsWrapper.insertAdjacentHTML('beforeend', memoryCardJava)
     cardsWrapper.insertAdjacentHTML('beforeend', memoryCardJava)
 
+    root.insertAdjacentHTML('afterbegin', pointStoreBar)
     root.insertAdjacentElement('beforeend', cardsWrapper)
 })()

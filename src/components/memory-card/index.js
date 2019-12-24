@@ -1,5 +1,11 @@
 const memoryCard = (function(){
     const module = {}
+    
+    /**
+     * Create schema of memory card
+     * 
+     * @param {*} param0 
+     */
     module.create = ({ src, alt }) => {
         return `
         <div class="memory-card" onClick="memoryCard.handleClick(this)">
@@ -19,11 +25,16 @@ const memoryCard = (function(){
             </article>
         </div>`
     }
-        
+    
+    /**
+     * Enable the card and check if is right the cards
+     * 
+     * @param {*} element 
+     */
     module.handleClick = element => {
-        module.activateMemoryCard(element)
+        module._activateMemoryCard(element)
 
-        module.checkIsRight()
+        module._checkIsRight()
     }
 
     /**
