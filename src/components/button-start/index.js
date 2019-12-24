@@ -6,11 +6,16 @@ const buttonStart = (function() {
      */
     module.create = () => {
         return `
-            <button class="btn-start">Start</button>
+            <button class="btn-start" onClick="buttonStart.handleClick()">Start</button>
         `
+    }
+    
+    module.handleClick = () => {
+console.log('sddfvdv')
     }
 
     return {
-        create: module.create
+        create: module.create,
+        handleClick: module.handleClick
     }
 })()
