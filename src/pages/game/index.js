@@ -2,6 +2,8 @@
     const root = document.querySelector('#root')
 
     const cardsWrapper = createCardWrapper()
+    const createMemoryCard = memoryCard.create
+
     const memoryCardC = createMemoryCard({
         src: 'img/icon-c.png',
         alt: 'Icone linguagem C++'
