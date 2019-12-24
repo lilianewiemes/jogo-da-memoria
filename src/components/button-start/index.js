@@ -1,21 +1,14 @@
-const buttonStart = (function() {
+const gameButton = (function() {
     const module = {}
 
     /**
-     * Create schema of button start
+     * Create schema of button
      */
-    module.create = () => {
-        return `
-            <button class="btn-start" onClick="buttonStart.handleClick()">Start</button>
-        `
-    }
-    
-    module.handleClick = () => {
-console.log('sddfvdv')
-    }
+    module.create = (content) => `
+        <button class="game-btn">${content}</button>
+    `
 
     return {
-        create: module.create,
-        handleClick: module.handleClick
+        create: module.create
     }
 })()

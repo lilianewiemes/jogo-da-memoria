@@ -5,8 +5,7 @@
     const createMemoryCard = memoryCard.create
 
     const pointStoreBar = pointBar.create()
-    const button = buttonStart.create()
-    const transparency = transparencyLayer.render()
+    const layerStartElement = layerStart.render('Start')
 
     const memoryCardC = createMemoryCard({
         src: 'img/icon-c.png',
@@ -36,6 +35,5 @@
 
     root.insertAdjacentHTML('afterbegin', pointStoreBar)
     root.insertAdjacentElement('beforeend', cardsWrapper)
-    root.insertAdjacentHTML('beforeend', transparency)
-    root.insertAdjacentHTML('beforeend', button)
+    root.insertAdjacentHTML('beforeend', layerStartElement)
 })()
