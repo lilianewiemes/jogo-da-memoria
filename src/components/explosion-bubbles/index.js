@@ -1,3 +1,7 @@
+//- Explosion
+//- adapted from "Anchor Click Canvas Animation" by Nick Sheffield
+//- https://codepen.io/nicksheffield/pen/NNEoLg/
+
 const explodeBubbles = (function() {
     const module = {}
 
