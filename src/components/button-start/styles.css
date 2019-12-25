@@ -15,17 +15,20 @@
     border-radius: 50px;
     animation: pulse 2s infinite;
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.8);
+    transition: opacity 200ms linear;
+}
+.game-btn.-disable {
+    opacity: 0;
 }
 
-@keyframes pulse
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-  }
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
 }
