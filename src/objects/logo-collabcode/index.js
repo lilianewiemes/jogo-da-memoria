@@ -1,4 +1,4 @@
-const titleCollabcode = (function () {
+const logoCollabcode = (function () {
     const module = {}
 
     module._style = () => {
@@ -6,21 +6,28 @@ const titleCollabcode = (function () {
         const style = document.createElement('style')
 
         style.textContent = `
-            .title-collabcode {
-                color: #f25a70;
-                font-size: 24px;
-                letter-spacing: 0.6px;
-                text-transform: uppercase;
+            .logo-collabcode {
+                background-color: #fff;
+                border: 40px solid #fff;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .logo-collabcode > .logo {
+                width: 175px;
             }
         `
 
         head.insertAdjacentElement('beforeend', style)
     }
 
-    module.render = content => {
+    module.render = () => {
         module._style()
 
-        return `<h1 class="title-collabcode">${content}</h1>`
+        return `
+            <figure class="logo-collabcode">
+                <img class="logo" src="img/icon-collabcode.png" />
+            </figure>
+        `
     }
 
     return {

@@ -1,4 +1,4 @@
-const titleCollabcode = (function () {
+const labelForm = (function () {
     const module = {}
 
     module._style = () => {
@@ -6,11 +6,9 @@ const titleCollabcode = (function () {
         const style = document.createElement('style')
 
         style.textContent = `
-            .title-collabcode {
-                color: #f25a70;
-                font-size: 24px;
-                letter-spacing: 0.6px;
-                text-transform: uppercase;
+            .label-form {
+                font-size: 16px;
+                color: #3a4042;
             }
         `
 
@@ -20,9 +18,11 @@ const titleCollabcode = (function () {
     module.render = content => {
         module._style()
 
-        return `<h1 class="title-collabcode">${content}</h1>`
+        return `
+            <label class="label-form">${content}</label>
+        `
     }
-
+        
     return {
         render: module.render
     }

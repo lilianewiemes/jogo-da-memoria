@@ -12,6 +12,8 @@ const flatButton = (function () {
 
         style.textContent = `
             .flat-button-${module._id} {
+                display: inline-flex;
+                justify-content: center;
                 background-color: ${active ? "#f25a70" : "#eae6da"};
                 color: ${active ? "#fff" : "#fffcee"};
                 font-size: 24px;
