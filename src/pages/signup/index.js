@@ -7,11 +7,9 @@
     const titleCollab = titleCollabcode.render('Welcome')
     const buttonsWrapper = createButtonWrapper.render(buttonLogin, buttonLogout)
     const logoWrapper = createLogoWrapper.render(logoCollab, titleCollab)
-    const labelFormLogin = labelForm.render('Email')
-    const inputFormLogin = inputForm.render()
+    const formSignup = createFormSignup.render()
 
     root.insertAdjacentHTML('beforeend', buttonsWrapper)
     root.insertAdjacentHTML('beforeend', logoWrapper)
-    root.insertAdjacentHTML('beforeend', labelFormLogin)
-    root.insertAdjacentHTML('beforeend', inputFormLogin)
+    root.insertAdjacentHTML('beforeend', formSignup)
 })()

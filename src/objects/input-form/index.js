@@ -24,9 +24,7 @@ const inputForm = (function () {
     module.render = content => {
         module._style()
 
-        return `
-            <input class="input-form"/>
-        `
+        return `<input class="input-form"/>`
     }
         
     return {
