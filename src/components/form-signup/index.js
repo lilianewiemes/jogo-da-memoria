@@ -15,19 +15,19 @@ const createFormSignup = (function () {
     }
 
     module._children = () => {
-        const labelUsername = labelForm.render('Username')
-        const inputUsername = inputForm.render()
+        const labelUsername = labelForm.render("Username")
+        const inputUsername = inputForm.render({ placeholder: "user.example" })
     
-        const labelEmail = labelForm.render('Email')
-        const inputEmail = inputForm.render()
+        const labelEmail = labelForm.render("Email")
+        const inputEmail = inputForm.render({ placeholder: "example@mail.com", type: "email" })
     
-        const labelPassword = labelForm.render('Password')
-        const inputPassword = inputForm.render()
+        const labelPassword = labelForm.render("Password")
+        const inputPassword = inputForm.render({ placeholder: "********", type: "password" })
     
-        const labelConfirmPassword = labelForm.render('Confirm Password')
-        const inputConfirmPassword = inputForm.render()
+        const labelConfirmPassword = labelForm.render("Confirm Password")
+        const inputConfirmPassword = inputForm.render({ placeholder: "********", type: "password" })
 
-        const btn = createButtonForm.render('Sign Up')
+        const btn = createButtonForm.render("Sign Up")
 
         return `
             ${labelUsername}

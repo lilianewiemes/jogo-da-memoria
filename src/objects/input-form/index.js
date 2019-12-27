@@ -21,10 +21,10 @@ const inputForm = (function () {
         head.insertAdjacentElement('beforeend', style)
     }
 
-    module.render = content => {
+    module.render = ({ type = 'text', placeholder = ''}) => {
         module._style()
 
-        return `<input class="input-form"/>`
+        return `<input class="input-form" type="${type}" placeholder="${placeholder}"/>`
     }
         
     return {
