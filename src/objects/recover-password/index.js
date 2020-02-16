@@ -1,4 +1,4 @@
-const inputForm = (function () {
+const recoverPassword = (function () {
     const module = {}
 
     module._style = () => {
@@ -6,25 +6,26 @@ const inputForm = (function () {
         const style = document.createElement('style')
 
         style.textContent = `
-            .input-form {
+            .recover-pwd {
                 display: block;
-                width: 100%;
-                font-size: 18px;
-                font-weight: bold;
                 color: #3a4042;
-                border-bottom: 1px solid #3a4042;
-                padding-bottom: 12px;
-                padding-top: 12px;
+                font-size: 14px;
+                opacity: 0.7;
+                text-decoration: none;
+                margin: 40px 0 60px 0;
+                text-align: right;
             }
         `
 
         head.insertAdjacentElement('beforeend', style)
     }
 
-    module.render = ({ placeholder = '', type = 'text'}) => {
+    module.render = ({ href, content }) => {
         module._style()
 
-        return `<input class="input-form" type="${type}" placeholder="${placeholder}"/>`
+        return `
+            <a class="recover-pwd" href="${href}">${content}</a>
+        `
     }
         
     return {
